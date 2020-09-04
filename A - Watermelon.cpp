@@ -1,15 +1,20 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<stdio.h>
 int main()
 {
-    int a,b,c,d;
-    scanf("%d",&a);
-    if(a%2==0&&a!=2){
+    int n;
+
+    scanf("%d",&n);
+
+    if(n!=2&&n%2==0)
+    {
         printf("YES\n");
-    }else{
-    printf("NO\n");
+    }
+    else{
+        printf("NO\n");
     }
 
 
-return 0;
+    return 0;
+
+
 }
