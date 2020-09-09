@@ -2,14 +2,32 @@
 using namespace std;
 int main()
 {
-    int n,m,a,b;
-    scanf("%d %d",&n,&m);
-    int sum=n/2*m;
-    if(n%2==1){
-        sum=sum+m/2;
+    int n,m,i,j,x,y,t,a,b;
+
+    while(scanf("%d %d",&n,&m)==2)
+    {
+        a = (m/2)*n;
+        if(m%2==1)
+        {
+            b = n/2;
+        }
+        else
+        {
+            b = 0;
+        }
+
+        printf("%d\n",a+b);
+
+
+
     }
-    printf("%d\n",sum);
 
 
-return 0;
+
+
+
+
+
+
+    return 0;
 }
