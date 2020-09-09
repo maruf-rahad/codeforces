@@ -1,48 +1,38 @@
 #include<bits/stdc++.h>
 using namespace std;
-map<string,int>mp;
-map<string,int> :: iterator it;
 int main()
 {
-    int n,m,a,b,i,j,ma;
-    string s,ss;
-
-    while(scanf("%d",&n)==1)
-    {
-        mp.clear();
-        for(i=1;i<=n;i++)
-        {
-            cin>>s;
-            if(mp.find(s)==mp.end())
-            {
-                mp[s] = 1;
+    string s;
+    int a,b,i,j,l,sum,sub;
+    while(cin>>s){
+        a=s.size();
+        sum=0,sub=0;
+        int flag=0;
+        for(i=0;i<a;i++){
+            if(s[i]=='0'){
+                sum++;
+                sub=0;
+                if(sum==7){
+                    flag=1;
+                    break;
+                }
             }
             else{
-                mp[s] = mp[s]+1;
+                sub++;
+                sum=0;
+                if(sub==7){
+                    flag=1;
+                    break;
+                }
             }
         }
-        ma = -1;
-
-        for(it = mp.begin();it!=mp.end();it++)
-        {
-            if(it->second>ma)
-            {
-                ma = it->second;
-                ss = it->first;
-
-            }
+        if(flag==1){
+            cout<<"YES\n";
         }
-        cout<<ss<<endl;
-
-
+        else{
+            cout<<"NO\n";
+        }
     }
-
-
-
-
-
-
-
 
 return 0;
 }
